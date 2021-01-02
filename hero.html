@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+ 
+	<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+ 
+	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+
+	<!--Title here-->
+    <title>英雄介绍</title>
+    
+	<style type="text/css">
+		 .container-fluid{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .navbar{
+            display:flex;
+            list-style: none;
+            background-color:#D80000;
+            height: 60px;
+			overflow: hidden;
+			zoom: 1;
+			z-index: 9999;
+        }
+        .nav-item a{
+			width: 100%;
+            height: 60px;
+            margin-right: 50px;
+			display: flex;
+            justify-content: center;
+            align-items: center;
+			color: white;
+			font-weight: bold;
+        }
+        .nav-item a:hover{
+			text-align: center;
+			background-color: red;
+        }
+        .nav-item h5{
+            width: 100%;
+            height: 60px;
+            margin-right: 50px;
+			display: flex;
+            justify-content: center;
+            align-items: center;
+			color: white;
+			font-weight: bold;
+        }
+ 
+		@font-face {
+			font-family: 'iconfont';  /* project id 2205125 */
+			src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot');
+			src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot?#iefix') format('embedded-opentype'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff2') format('woff2'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff') format('woff'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.ttf') format('truetype'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.svg#iconfont') format('svg');
+		}
+		.iconfont{
+			font-family:"iconfont" !important;
+			font-size:16px;font-style:normal;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-stroke-width: 0.5px;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		.mainimg{
+			width: 100%;
+			opacity: 0.7;
+			z-index: -1;
+		}
+		.caption{
+			position: absolute;
+			top: 350px;
+			left: 250px;
+			color: #323232;
+			text-shadow:3px 3px#A9A9A9;
+			font-size: 144px;
+			font-weight: bold;
+			z-index: 2;
+		}
+		.post-area{
+			width: 100%;
+			padding-left: 200px;
+            padding-right: 200px;
+		}
+		.introblock{
+			background-color: #A9A9A9;
+			width: 100%;
+			height: 200px;
+            margin-top: 100px;
+		}
+
+        .introimg1{
+            width: 15%;
+            float: left;
+        }
+        .intropassage1{
+            width: 85%;
+			float: left;
+
+		}
+		.intropassage1 a{
+			text-decoration:none; 
+		}
+		.introimg2{
+            width: 15%;
+            float: right;
+        }
+        .intropassage2{
+            width: 85%;
+			float: right;
+
+		}
+		.intropassage2 a{
+			text-decoration:none; 
+		}
+		.imgstyle{
+			border-radius:20px;
+		}
+		.footer-left{
+			padding-left: 4%;
+			font-weight: bold;
+        }
+        .footer-right{
+			padding-left: 4%;
+			font-weight: bold;
+        }
+	
+	</style>
+
+</head>
+<body>
+	<!--header-area-->
+	<div id="header"></div>
+    <script>
+    $.get("assets/tpl/header.tpl", function(result){      
+        $("#header").html(result);
+    });
+    </script>
+   <!--caption-area-->
+	<div class="caption-area">
+		<div class="container-fluid">
+			<div class="row no-gutters">
+				<div class="col-md-12">
+					<div class="mainimg" >
+						<img src="assets/images/main1.jpg" alt="" width="100%">
+					</div>
+					<div class="caption"><p>漫 威 大 家 庭</p></div>	
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 引入模板引擎js -->
+	<script src="assets/js/template-web.js"></script>
+	<!-- 制作模板 -->
+	<script type="text/html" id="template1">
+		<div class="row no-gutters">
+			<div class="introblock">
+				<div class="introimg1">
+					{{@imgurl}}
+				</div>
+				<div class="intropassage1">
+					<section>
+						<p><h2>{{@name}}</h2></p>
+						<p>{{@introduction}}</p>
+					</section>
+				</div>
+			</div>                  
+		</div>
+
+	</script>
+	<script type="text/html" id="template2">
+		<div class="row no-gutters">
+			<div class="introblock">
+				<div class="introimg2">
+					{{@imgurl}}
+				</div>
+				<div class="intropassage2">
+					<section>
+						<p><h2>{{@name}}</h2></p>
+						<p>{{@introduction}}</p>
+					</section>
+				</div>
+			</div>                  
+		</div>
+
+	</script>
+	<script type="text/html" id="detail_template">
+		<div style="height:50px;">&nbsp;</div>
+		<article>
+			<header>
+				<div class="row no-gutters">
+					<div class="col-md-3">
+						{{@imgurl}}
+					</div>
+					<div class="col-md-9">
+						<h1>{{@name}}</h1>
+						<hr style=" width:100%; height: 2px; background-color:#696969">	
+						<p>{{@content1}}</p>
+						<p>{{@content2}}</p>
+					</div>			                 
+				</div>
+			</header>
+			<main>
+	
+			</main>
+		</article>
+
+	</script>
+	<!--post-area-->
+	<div class="post-area">
+		<div class="container-fluid" id="hero">
+
+		</div>
+	</div>
+	<script>
+		var url="assets/json/hero.json";
+		var request=new XMLHttpRequest();
+		request.open("get",url);
+		request.send(null);
+		request.onload=function(){
+			if(request.status==200){
+			var hero=JSON.parse(request.responseText);  //request.responseText
+			}
+			// 获取数据
+			for(var i=0;i<hero.length;i++){
+				if(i%2==0){
+					// 将数据放入模板中
+					var res=template("template1",hero[i]);
+					// 将模板放入页面中
+					document.getElementById("hero").innerHTML+=res;
+				}else{
+					// 将数据放入模板中 
+					var res=template("template2",hero[i]);
+					// 将模板放入页面中
+					document.getElementById("hero").innerHTML+=res;
+				}
+			
+			}
+		}		
+	</script>
+	<script>
+		window.onload=function(){
+			var routeView=null;//路由视图
+			window.addEventListener('hashchange',function(){//监听路由变化
+				var routeView=document.getElementById("hero");
+				switch(location.hash){//判断路由
+					case '#/ironman':
+						add(0);
+						break;
+					case '#/thor':
+						add(1);
+						break;
+					case '#/captainamerica':
+						add(2);
+						break;
+					case '#/antman':
+						add(3);
+						break;
+					case '#/blackwidow':
+						add(4);
+						break;
+					default:
+						return;
+				}
+			})
+		}
+
+		function add(i){
+			var url="assets/json/herointro.json";
+			var request=new XMLHttpRequest();
+			request.open("get",url);
+			request.send(null);
+			request.onload=function(){
+				if(request.status==200){
+					var data=JSON.parse(request.responseText); 
+					var res=template("detail_template",data[i]);
+					document.getElementById("hero").innerHTML=res;
+				}
+			}
+		}
+	</script>
+	<!--footer-area-->
+    <div id="footer"></div>
+    <script>
+    $.get("assets/tpl/footer.tpl", function(result){      
+	    $("#footer").html(result);
+    });
+	</script>
+
+   
+</body>
+</html>

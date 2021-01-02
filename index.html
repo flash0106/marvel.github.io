@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 新 Bootstrap4 核心 CSS 文件 -->
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+ 
+	<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+ 
+	<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+	<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+ 
+	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery-3.1.1.js"></script>
+    <script src="assets/js/lbt.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <title>漫威迷官网</title>
+    <style type="text/css">
+        .container-fluid{
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .navbar{
+            display:flex;
+            list-style: none;
+            background-color:#D80000;
+            height: 60px;
+			overflow: hidden;
+			zoom: 1;
+			z-index: 9999;
+        }
+        .nav-item a{
+			width: 100%;
+            height: 60px;
+            margin-right: 50px;
+			display: flex;
+            justify-content: center;
+            align-items: center;
+			color: white;
+			font-weight: bold;
+        }
+        .nav-item a:hover{
+			text-align: center;
+			background-color: red;
+        }
+        .nav-item h5{
+            width: 100%;
+            height: 60px;
+            margin-right: 50px;
+			display: flex;
+            justify-content: center;
+            align-items: center;
+			color: white;
+			font-weight: bold;
+        }
+ 
+		@font-face {
+			font-family: 'iconfont';  /* project id 2205125 */
+			src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot');
+			src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot?#iefix') format('embedded-opentype'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff2') format('woff2'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff') format('woff'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.ttf') format('truetype'),
+			url('//at.alicdn.com/t/font_2205125_q7909c65ai.svg#iconfont') format('svg');
+		}
+		.iconfont{
+			font-family:"iconfont" !important;
+			font-size:16px;font-style:normal;
+			-webkit-font-smoothing: antialiased;
+			-webkit-text-stroke-width: 0.5px;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+        .mainmenu{
+			list-style: none;
+            background-color:		#A9A9A9;
+
+			zoom: 1;
+			height:711px;
+			color: white;
+			font-weight: bold;
+			
+		}
+		.mainmenu h2{
+			background-color:#696969;
+			height: 60px;
+            display: flex;
+            justify-content:flex-start;
+            align-items:center;
+			overflow: hidden;
+		}	
+        .mainmenu ul{
+            margin-left: 0;
+        }
+		.mainmenu li{
+			text-align:left;
+
+			background-color:#A9A9A9;
+			overflow: hidden;
+		}
+		.mainmenu a{
+			width: 100%;
+
+			text-align: left;
+
+			text-decoration: none;
+			color: white;
+			font-weight: bold;
+			overflow: hidden;
+		}
+		.mainmenu a:hover{
+			text-align:left;
+			background-color: #DCDCDC;
+			overflow: hidden;
+		}
+
+        #divs2{
+            width: 100%;
+            height: 711px;
+            border: 1px solid hsla(0,0%,100%,0.27);
+	        border-radius: 5px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .colorblock{
+			width: 100%;
+			height: 150px;
+			background-color: #D80000;
+			color:  #696969;
+			text-align: center;
+			text-shadow:3px 3px#A9A9A9;
+			font-size: 48px;
+			font-weight: bold;
+			overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+        .post-area{
+			width: 100%;
+			padding-left: 200px;
+            padding-right: 200px;
+		}
+
+        .introblock{
+			background-color: #A9A9A9;
+			width: 100%;
+			height: 200px;
+            margin-top: 100px;
+		}
+
+        .introimg{
+            width: 15%;
+            float: left;
+        }
+        .intropassage{
+            width: 85%;
+			float: left;
+
+        }
+        .footer-left{
+            padding-left: 4%;
+            font-weight: bold;
+        }
+        .footer-right{
+            padding-left: 4%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!--header-area-->
+    <div id="header"></div>
+    <script>
+    $.get("assets/tpl/header.tpl", function(result){      
+        $("#header").html(result);
+    });
+    </script>
+    <!--menu-area-->
+    <div class="menu-area">
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-md-10">
+                    <div id="divs2"></div>
+                </div>
+                <div class="col-md-2">
+                    <div class="mainmenu">
+                        <h2>网站导航</h2>
+                        <ul class="list-group"> 
+                            <li class="list-group-item list-group-item-secondary"><a href="index.html"><i class="iconfont">&#xe60f;</i>主页</a></li>
+                            <li class="list-group-item list-group-item-secondary"><a href="hero.html"><i class="iconfont">&#xe60c;</i>英雄介绍</a></li>
+                            <li class="list-group-item list-group-item-secondary"><a href="movie.html"><i class="iconfont">&#xe60e;</i>电影介绍</a></li>
+                            <li class="list-group-item list-group-item-secondary"><a href="discussion.html"><i class="iconfont">&#xe60b;</i>调查问卷</a></li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                            <li>&nbsp;</li>
+                        </ul>
+                        <form id="form1">
+                            <h2>登录</h2>
+                            用户名：<input type="text" id="loginName"><br>
+                            密码：&nbsp;&nbsp;&nbsp;	<input type="password" id="password"><br>
+                            <input type="submit" onclick="clientCheck()" value="登录">&nbsp;&nbsp;
+                            <input type="submit" onclick="init()" value="注册">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="colorblock">
+        <div class="container-fluid">
+            <div class="row no-gutters">
+                <div class="col-md-12">
+                    <p>发掘漫威英雄的不同面</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--post-area-->
+    <div class="post-area">
+            <div class="container-fluid">
+                <div class="row no-gutters">
+                        <div class="introblock">
+                            <div class="introimg">
+                                <img src="assets/images/ironman.png" height="200px">
+                            </div>
+
+                            <div class="intropassage">
+                                <section>
+                                    <p><h2>钢铁侠</h2></p>
+                                    <p><em>托尼·斯塔克&nbsp;</em>是斯塔克工业的继承人，在一次绑架事故中，托尼在自身受重伤的情况下和英森博士发明了一套动力增强装甲，这套装备由金钛合金制成，有一定的局限性，会损耗，托尼穿上盔甲后，不仅成功解救自己的性命，而且变身成了复仇者联盟中惩恶扬善的钢铁侠。钢铁侠很有魅力，聪明绝顶、风流快活、幽默自信，很有观众缘。</p>
+                                </section>
+                            </div>
+                        </div>                  
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="introblock">
+                            <div class="introimg">
+                                <img src="assets/images/thor.png" height="200px">
+                            </div>
+
+                            <div class="intropassage">
+                                <section>
+                                    <p><h2>雷神</h2></p>
+						            <p><em>托尔</em>&nbsp;是奥丁与盖娅之子，与奥丁所收养的冰霜巨人之子洛基一同长大成人，获得了使用雷神之锤的资格。他是仙宫的守护者和继承人。但他后来逐渐变得傲慢自大，所以被父亲奥丁送到地球以在人类的环境里学习如何成为一个真正的英雄。</p>
+                                </section>
+                                
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="introblock">
+                            <div class="introimg">
+                                <img src="assets/images/captainamerica.png" height="200px">
+                            </div>
+
+                            <div class="intropassage">
+                                <section>
+                                    <p><h2>美国队长</h2></p>
+						            <p>美国队长是一名土生土长的美国人。他名叫<em>史蒂夫·罗杰斯</em>&nbsp;（Steve Rogers），原本是一个瘦弱的青年，为了报效国家，他自愿参加军方的秘密计划，注射了一种超级血清，成为超级士兵。然而就在此刻，纳粹间谍杀害了发明药物配方的教授，让史蒂夫成为唯一的超级战士。美国队长不是天生的英雄，也没有不死之身（这也是他需要盾牌保护自己的原因），他只是比一般人坚强、勇敢、机智。</p>
+                                </section>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="introblock">
+                            <div class="introimg">
+                                <img src="assets/images/antman.png" height="200px">
+                            </div>
+
+                            <div class="intropassage">
+                                <section>
+                                    <p><h2>蚁人</h2></p>
+						            <p>行骗为生的<em>斯科特·朗</em>&nbsp;在偷了生化学家汉克·皮姆博士发明的蚁人战服后，拥有了自由控制身体大小的超能力。蚁人战服采用了他从异空间采集到的一种“皮姆粒子”来改变自身和其他物体的大小，人体和其他物体充分接触这种粒子就可以自由变大和缩小。他最大的状态大约是100英尺（30米），最小状态大约是0.5英寸。</p>
+                                </section>
+                                
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+                <div class="row no-gutters">
+                    <div class="col-md-12">
+                        <div class="introblock">
+                            <div class="introimg">
+                                <img src="assets/images/blackwidow.png" height="200px">
+                            </div>
+                            <div class="intropassage">
+                                <section>
+                                    <p><h2>黑寡妇</h2></p>
+						            <p>本名<em>娜塔莎·罗曼诺夫</em>&nbsp;，1928年出生于前苏联的斯大林格勒，自幼被苏联情报人员传授各种格斗与暗杀技巧，身体经苏联政府秘密机构“红房”改造后，强化了各项体能并延缓了衰老速度，成为苏联在冷战时期的王牌特工，代号“黑寡妇”，起初被苏联派往美国从事间谍活动，窃取美国政府秘密科技，后经鹰眼劝说背叛“红房”，加入复仇者联盟，并获得美国国籍。
+							        黑寡妇接受过广泛的间谍训练，也是一名专家级的武术家(包括空手道、柔道、肯波流空手道、忍术、合气道、法国式拳击以及各种风格的功夫)、射手和武器专家。
+							        </p>
+                                </section>                                
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-area-->
+    <div id="footer"></div>
+    <script>
+    $.get("assets/tpl/footer.tpl", function(result){      
+        $("#footer").html(result);
+    });
+    </script>
+
+<script>
+	//调用
+	var imgs = ["assets/images/main1.jpg", "assets/images/main2.jpg", "assets/images/main3.jpg", "assets/images/main4.jpg"]
+	var hrefs = ["#1", "#2", "#3", "#4"]
+	var lbt = lbimg("divs2", imgs,hrefs,3000).start()
+</script>
+</body>
+</html>
