@@ -90,6 +90,35 @@
 			font-weight: bold;
 			z-index: 2;
 		}
+		.movie-area{
+			width: 100%;
+			height: 260px;
+			background-color: #D80000;
+			padding-top: 30px;
+		}
+		.post-movie{
+			display: flex;
+            justify-content: center;
+            align-items: center;
+		}
+		.post-movie img{
+			border-radius:10px;
+			height: 200px;
+		}
+
+		.post-area{
+			padding-left: 200px;
+			padding-right: 200px;
+		}
+		h5{
+			text-align: center;
+		}
+		h5:hover{
+			color: white;
+		}
+		.imgstyle{
+			border-radius:20px;
+		}
 		.footer-left{
 			padding-left: 4%;
 			font-weight: bold;
@@ -121,7 +150,115 @@
 			</div>
 		</div>
 	</div>
+	<!--movie-area-->
+	<div class="movie-area">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="post-movie">
+						<a href="#/movie-ironman"><img src="assets/images/movie-ironman.jpg"></a>
+					</div>
+					<a href="#/movie-ironman"><h5>IRON MAN(2008)</h5></a>
+				</div>
+				<div class="col-md-3">
+					<div class="post-movie">
+						<a href="#/movie-captainamerica"><img src="assets/images/movie-captainamerica.jpg"></a>
+					</div>
+					<a href="#/movie-captainamerica"><h5>CAPTAIN AMERICA(2011)</h5></a>
+				</div>
+				<div class="col-md-3">
+					<div class="post-movie">
+						<a href="#/movie-thor"><img src="assets/images/movie-thor.jpg"></a>
+					</div>
+					<a href="#/movie-thor"><h5>THOR(2011)</h5></a>
+				</div>
+				<div class="col-md-3">
+					<div class="post-movie">
+						<a href="#/movie-avengers"><img src="assets/images/movie-avengers.jpg"></a>
+					</div>
+					<a href="#/movie-avengers"><h5>AVENGERS(2012)</h5></a>						
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 引入模板引擎js -->
+	<script src="assets/js/template-web.js"></script>
+	<!-- 制作模板 -->
+	<script type="text/html" id="detail_template">
+		<div style="height:50px;">&nbsp;</div>
+		<article>
+			<header>
+				<div class="row no-gutters">
+					<div class="col-md-3">
+						{{@imgurl}}
+					</div>
+					<div class="col-md-9">
+						<h1>{{@name}}</h1>
+						<hr style=" width:100%; height: 2px; background-color:#696969">	
+						<pre>{{@content}}</pre>
+					</div>			                 
+				</div>
+			</header>
+			<main>
+				<div class="row no-gutters">
+					<div class="col-md-12">
+						<h2>剧情简介</h2>
+						<hr style=" width:100%; height: 2px; background-color:#696969">	
+					</div>
+				</div>
+				<div class="row no-gutters">
+					<div class="col-md-12">
+						<p>{{introduction1}}</p>
+						<p>{{introduction2}}</p>
+					</div>
+				</div>
+			</main>
+		</article>
+	</script>
+	<!--post-area-->
+	<div class="post-area">
+		<div class="container-fluid" id="movie">
 
+		</div>
+	</div>
+	<script>
+		window.onload=function(){
+			var routeView=null;//路由视图
+			window.addEventListener('hashchange',function(){//监听路由变化
+				var routeView=document.getElementById("movie");
+				switch(location.hash){//判断路由
+					case '#/movie-ironman':
+						add(0);
+						break;
+					case '#/movie-captainamerica':
+						add(1);
+						break;
+					case '#/movie-thor':
+						add(2);
+						break;
+					case '#/movie-avengers':
+						add(3);
+						break;
+					default:
+						return;
+				}
+			})
+		}
+
+		function add(i){
+			var url="assets/json/movieintro.json";
+			var request=new XMLHttpRequest();
+			request.open("get",url);
+			request.send(null);
+			request.onload=function(){
+				if(request.status==200){
+					var data=JSON.parse(request.responseText); 
+					var res=template("detail_template",data[i]);
+					document.getElementById("movie").innerHTML=res;
+				}
+			}
+		}
+	</script>
    <div id="footer"></div>
     <script>
     $.get("assets/tpl/footer.tpl", function(result){      

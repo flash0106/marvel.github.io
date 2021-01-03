@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <nav class="navbar navbar-expand-sm">
+                    <nav class="navbar navbar-fixed-top navbar-expand-sm">
                         <a class="navbar-brand" href="index.html">
                             <img src="assets/images/logo1.gif" alt="" style="height: fit-content;">
                         </a>

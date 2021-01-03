@@ -4,28 +4,27 @@
         "name":"<strong>钢铁侠</strong><span><em>（美国漫威漫画公司旗下超级英雄）</em></span>",
         "content1":"钢铁侠<em>（Iron Man）</em>是美国漫威漫画旗下的超级英雄，初次登场于《悬疑故事》第39期（1963年3月），由斯坦·李、赖瑞·理柏、唐·赫克和杰克·科比联合创造。全名安东尼·爱德华·“托尼”·斯塔克（Anthony Edward 'Tony' Stark），是斯塔克工业（STARK INDUSTRIES）的CEO，因一场阴谋绑架中，胸部遭弹片穿入，生命危在旦夕，为了挽救自己的性命，在同被绑架的物理学家何·银森（Ho Yinsen）的协助下托尼制造方舟反应炉（Arc Reactor）从而逃过一劫，利用方舟反应炉作为能量运转的来源，暗中制造了一套装甲（Mark1）杀出重围后逃脱，后参与创立复仇者联盟。",
         "content2":"在漫威电影宇宙（Marvel Cinematic Universe，以下简称MCU；编号EARTH-199999）中，钢铁侠由美国著名演员小罗伯特·唐尼扮演。"
-        
 	},
 	{
-		"imgurl":"<img class='imgstyle' src='assets/images/intro-thor.jpg' width='100%'>",
+	"imgurl":"<img class='imgstyle' src='assets/images/intro-thor.jpg' width='100%'>",
         "name":"<strong>雷神</strong><span><em>（美国漫威漫画公司旗下超级英雄）</em></span>",
         "content1":"雷神<em>（Thor）</em>是美国漫威漫画旗下的超级英雄，由漫威（Marvel）创造的一位漫画超级英雄，原形为北欧神话中阿斯加德的雷神托尔。雷神最早登场于漫威的漫画《探寻神秘之旅》（Journey Into Mystery） 系列。1962年《雷神》连载漫画由传奇漫画家搭档斯坦·李和杰克·科比推出，他们以这个挥舞着神锤的北欧神话人物掀起了冒险动作漫画全新的一页。根据漫威漫画改编的超级英雄电影《雷神》于2011年上映，是漫威电影宇宙的第四部影片。",
         "content2":"雷神（索尔·奥丁森）曾与亥伯龙在超越神族大战中赴死，后来在最近的期刊中又骑着他的山羊回归了。其实这已经是托尔·奥丁森不知多少次死而复生了。"
 	},
 	{
-		"imgurl":"<img class='imgstyle' src='assets/images/intro-captainamerica.jpg' width='100%'>",
+	"imgurl":"<img class='imgstyle' src='assets/images/intro-captainamerica.jpg' width='100%'>",
         "name":"<strong>美国队长</strong><span><em>（美国漫威漫画公司旗下超级英雄）</em></span>",
         "content1":"美国队长<em>（Captain America）</em>是美国漫威漫画旗下超级英雄，初次登场于《美国队长》（Captain America Comics）第1期（1941年3月），由乔·西蒙和杰克·科比联合创造，被视为美国精神的象征。本名史蒂夫·罗杰斯（Steve Rogers），1918年7月4日出生于美国纽约布鲁克林区，原本是一名身体瘦弱的年轻人，在接受美国政府的改造后，成为各项体能都远超常人的“超级战士”，还被美国政府赋予了由世界上最坚硬的金属之一振金制成的盾牌，并在二战中率领侵袭者立下赫赫战功。",
         "content2":"在漫威电影宇宙中，由克里斯·埃文斯出演第一任美国队长；由安东尼·麦凯出演第二任美国队长猎鹰。"
 	},
 	{
-		"imgurl":"<img class='imgstyle' src='assets/images/intro-antman.jpg' width='100%'>",
+	"imgurl":"<img class='imgstyle' src='assets/images/intro-antman.jpg' width='100%'>",
         "name":"<strong>蚁人</strong><span><em>（美国漫威漫画公司旗下超级英雄）</em></span>",
         "content1":"蚁人（Ant-Man）是美国漫威漫画旗下超级英雄，初次登场于《惊异故事》（Tales to Astonish）第27期（1962年1月），由编剧斯坦·李以及画家杰克·科比联合创造，共有三代。其中最为人们所熟知的是初代蚁人亨利·乔纳森·皮姆，他是复仇者联盟的创始人之一。现任蚁人是二代蚁人斯科特·朗。",
         "content2":"在漫威电影宇宙中，蚁人讲述了斯科特·朗拥有身体变小的力量，必须接受自己的身份并帮助他的导师——生化学家汉克·皮姆保护他所发明的蚁人战服。在敌人的威胁下，皮姆与朗必须精心策划并执行一场惊天骗局来拯救世界的故事。"
 	},
 	{
-		"imgurl":"<img class='imgstyle' src='assets/images/intro-blackwidow.jpg' width='100%'>",
+	"imgurl":"<img class='imgstyle' src='assets/images/intro-blackwidow.jpg' width='100%'>",
         "name":"<strong>黑寡妇</strong><span><em>（美国漫威漫画公司旗下超级英雄）</em></span>",
         "content1":"黑寡妇<em>（Black Widow）</em>本名娜塔莎·罗曼诺夫，1928年出生于前苏联的斯大林格勒，自幼被苏联情报人员传授各种格斗与暗杀技巧，身体经苏联政府秘密机构“红房”改造后，强化了各项体能并延缓了衰老速度，成为苏联在冷战时期的王牌特工，代号“黑寡妇”，起初被苏联派往美国从事间谍活动，窃取美国政府秘密科技，后经鹰眼劝说背叛“红房”，加入复仇者联盟，并获得美国国籍。",
         "content2":"在漫威电影宇宙中，由斯嘉丽·约翰逊饰演，替身多由海蒂·玛尼梅可担任。"
