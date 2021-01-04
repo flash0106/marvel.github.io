@@ -17,160 +17,9 @@
     <script src="assets/js/jquery-3.1.1.js"></script>
     <script src="assets/js/lbt.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-    <title>漫威迷官网</title>
-    <style type="text/css">
-        .container-fluid{
-            padding-right: 0px;
-            padding-left: 0px;
-        }
-        .navbar{
-            display:flex;
-            list-style: none;
-            background-color:#D80000;
-            height: 60px;
-			overflow: hidden;
-			zoom: 1;
-			z-index: 9999;
-        }
-        .nav-item a{
-			width: 100%;
-            height: 60px;
-            margin-right: 50px;
-			display: flex;
-            justify-content: center;
-            align-items: center;
-			color: white;
-			font-weight: bold;
-        }
-        .nav-item a:hover{
-			text-align: center;
-			background-color: red;
-        }
-        .nav-item h5{
-            width: 100%;
-            height: 60px;
-            margin-right: 50px;
-			display: flex;
-            justify-content: center;
-            align-items: center;
-			color: white;
-			font-weight: bold;
-        }
- 
-		@font-face {
-			font-family: 'iconfont';  /* project id 2205125 */
-			src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot');
-			src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot?#iefix') format('embedded-opentype'),
-			url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff2') format('woff2'),
-			url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff') format('woff'),
-			url('//at.alicdn.com/t/font_2205125_q7909c65ai.ttf') format('truetype'),
-			url('//at.alicdn.com/t/font_2205125_q7909c65ai.svg#iconfont') format('svg');
-		}
-		.iconfont{
-			font-family:"iconfont" !important;
-			font-size:16px;font-style:normal;
-			-webkit-font-smoothing: antialiased;
-			-webkit-text-stroke-width: 0.5px;
-			-moz-osx-font-smoothing: grayscale;
-		}
-
-        .mainmenu{
-			list-style: none;
-            background-color:		#A9A9A9;
-
-			zoom: 1;
-			height:711px;
-			color: white;
-			font-weight: bold;
-			
-		}
-		.mainmenu h2{
-			background-color:#696969;
-			height: 60px;
-            display: flex;
-            justify-content:flex-start;
-            align-items:center;
-			overflow: hidden;
-		}	
-        .mainmenu ul{
-            margin-left: 0;
-        }
-		.mainmenu li{
-			text-align:left;
-
-			background-color:#A9A9A9;
-			overflow: hidden;
-		}
-		.mainmenu a{
-			width: 100%;
-
-			text-align: left;
-
-			text-decoration: none;
-			color: white;
-			font-weight: bold;
-			overflow: hidden;
-		}
-		.mainmenu a:hover{
-			text-align:left;
-			background-color: #DCDCDC;
-			overflow: hidden;
-		}
-
-        #divs2{
-            width: 100%;
-            height: 711px;
-            border: 1px solid hsla(0,0%,100%,0.27);
-	        border-radius: 5px;
-            margin-right: auto;
-            margin-left: auto;
-        }
-
-        .colorblock{
-			width: 100%;
-			height: 150px;
-			background-color: #D80000;
-			color:  #696969;
-			text-align: center;
-			text-shadow:3px 3px#A9A9A9;
-			font-size: 48px;
-			font-weight: bold;
-			overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-		}
-        .post-area{
-			width: 100%;
-			padding-left: 200px;
-            padding-right: 200px;
-		}
-
-        .introblock{
-			background-color: #A9A9A9;
-			width: 100%;
-			height: 200px;
-            margin-top: 100px;
-		}
-
-        .introimg{
-            width: 15%;
-            float: left;
-        }
-        .intropassage{
-            width: 85%;
-			float: left;
-
-        }
-        .footer-left{
-            padding-left: 4%;
-            font-weight: bold;
-        }
-        .footer-right{
-            padding-left: 4%;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <!--Title here-->
+    <title>漫威迷官方网站</title>
 </head>
 <body>
     <!--header-area-->
@@ -180,21 +29,64 @@
         $("#header").html(result);
     });
     </script>
+
     <!--menu-area-->
     <div class="menu-area">
         <div class="container-fluid">
             <div class="row no-gutters">
-                <div class="col-md-10">
+                <div class="col-md-10 col-xs-12"> 
                     <div id="divs2"></div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 col-xs-0">
                     <div class="mainmenu">
                         <h2>网站导航</h2>
                         <ul class="list-group"> 
                             <li class="list-group-item list-group-item-secondary"><a href="index.html"><i class="iconfont">&#xe60f;</i>主页</a></li>
-                            <li class="list-group-item list-group-item-secondary"><a href="hero.html"><i class="iconfont">&#xe60c;</i>英雄介绍</a></li>
-                            <li class="list-group-item list-group-item-secondary"><a href="movie.html"><i class="iconfont">&#xe60e;</i>电影介绍</a></li>
-                            <li class="list-group-item list-group-item-secondary"><a href="discussion.html"><i class="iconfont">&#xe60b;</i>调查问卷</a></li>
+                            <div class="dropdown">
+                                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                    <i class="iconfont">&#xe60e;</i>英雄介绍
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="hero.html#/ironman">钢铁侠</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="hero.html#/thor">雷神</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="hero.html#/captainamerica">美国队长</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="hero.html#/antman">蚁人</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="hero.html#/blackwidow">黑寡妇</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="dropdown" >
+                                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                    <i class="iconfont">&#xe60c;</i>电影介绍
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="movie.html#/movie-ironman">《钢铁侠》</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="movie.html#/movie-captainamerica">《美国队长》</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="movie.html#/movie-thor">《雷神》</a>
+                                    </li>
+                                    
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="movie.html#/movie-avengers">《复仇者联盟》</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <li class="list-group-item list-group-item-secondary"><a href="test.html"><i class="iconfont">&#xe60b;</i>调查问卷</a></li>
                             <li>&nbsp;</li>
                             <li>&nbsp;</li>
                             <li>&nbsp;</li>
@@ -217,7 +109,7 @@
         <div class="container-fluid">
             <div class="row no-gutters">
                 <div class="col-md-12">
-                    <p>发掘漫威英雄的不同面</p>
+                    <i class="webfont">发掘漫威英雄的不同面</i>
                 </div>
             </div>
         </div>
@@ -226,6 +118,7 @@
     <div class="post-area">
             <div class="container-fluid">
                 <div class="row no-gutters">
+                    <div class="col-md-12">
                         <div class="introblock">
                             <div class="introimg">
                                 <img src="assets/images/ironman.png" height="200px">
@@ -237,7 +130,8 @@
                                     <p><em>托尼·斯塔克&nbsp;</em>是斯塔克工业的继承人，在一次绑架事故中，托尼在自身受重伤的情况下和英森博士发明了一套动力增强装甲，这套装备由金钛合金制成，有一定的局限性，会损耗，托尼穿上盔甲后，不仅成功解救自己的性命，而且变身成了复仇者联盟中惩恶扬善的钢铁侠。钢铁侠很有魅力，聪明绝顶、风流快活、幽默自信，很有观众缘。</p>
                                 </section>
                             </div>
-                        </div>                  
+                        </div>
+                    </div>                  
                 </div>
                 <div class="row no-gutters">
                     <div class="col-md-12">

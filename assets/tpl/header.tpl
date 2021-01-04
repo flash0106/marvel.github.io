@@ -20,7 +20,7 @@
                                 <a class="nav-link" href="movie.html">电影介绍</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="discussion.html">调查问卷</a>
+                                <a class="nav-link" href="test.html">调查问卷</a>
                             </li>
                         </ul> 
                     </nav>

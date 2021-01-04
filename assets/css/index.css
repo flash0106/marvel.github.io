@@ -1,0 +1,170 @@
+.container-fluid{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+.navbar{
+	display:flex;
+	list-style: none;
+	background-color:#D80000;
+	height: 60px;
+	overflow: hidden;
+	zoom: 1;
+	z-index: 9999;
+}
+.nav-item a{
+	width: 100%;
+	height: 60px;
+	margin-right: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+}
+.nav-item a:hover{
+	text-align: center;
+	background-color: red;
+}
+.nav-item h5{
+	width: 100%;
+	height: 60px;
+	margin-right: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: 'iconfont';  /* project id 2205125 */
+	src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot');
+	src: url('//at.alicdn.com/t/font_2205125_q7909c65ai.eot?#iefix') format('embedded-opentype'),
+	url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff2') format('woff2'),
+	url('//at.alicdn.com/t/font_2205125_q7909c65ai.woff') format('woff'),
+	url('//at.alicdn.com/t/font_2205125_q7909c65ai.ttf') format('truetype'),
+	url('//at.alicdn.com/t/font_2205125_q7909c65ai.svg#iconfont') format('svg');
+}
+.iconfont{
+	font-family:"iconfont" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.5px;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('assets/webfont/webfont.eot'); /* IE9 */
+    src: url('assets/webfont/webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('assets/webfont/webfont.woff2') format('woff2'),
+    url('assets/webfont/webfont.woff') format('woff'), /* chrome、firefox */
+    url('assets/webfont/webfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('assets/webfont/webfont.svg#webfont') format('svg'); /* iOS 4.1- */
+}
+.web-font {
+    font-family: "webfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.mainmenu{
+	list-style: none;
+	background-color:		#A9A9A9;
+
+	zoom: 1;
+	height:711px;
+	color: white;
+	font-weight: bold;
+	
+}
+.mainmenu h2{
+	background-color:#696969;
+	height: 60px;
+	display: flex;
+	justify-content:flex-start;
+	align-items:center;
+	overflow: hidden;
+}	
+.mainmenu ul{
+	margin-left: 0;
+}
+.mainmenu li{
+	text-align:left;
+
+	background-color:#A9A9A9;
+	overflow: hidden;
+}
+.mainmenu a{
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	overflow: hidden;
+}
+.mainmenu button{
+	width: 100%;
+	text-align: left;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+#divs2{
+	width: 100%;
+	height: 711px;
+	border: 1px solid hsla(0,0%,100%,0.27);
+	border-radius: 5px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.colorblock{
+	width: 100%;
+	height: 150px;
+	background-color: #D80000;
+	color:  #696969;
+	text-align: center;
+	text-shadow:3px 3px#A9A9A9;
+	font-size: 48px;
+	font-weight: bold;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.post-area{
+	width: 100%;
+	padding-left: 200px;
+	padding-right: 200px;
+}
+
+.introblock{
+	background-color: #A9A9A9;
+	width: 100%;
+	height: 200px;
+	margin-top: 100px;
+}
+
+.introimg{
+	width: 15%;
+	float: left;
+}
+.intropassage{
+	width: 85%;
+	float: left;
+
+}
+.footer-left{
+	padding-left: 4%;
+	font-weight: bold;
+}
+.footer-right{
+	padding-left: 4%;
+	font-weight: bold;
+}
