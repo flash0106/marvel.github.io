@@ -16,6 +16,49 @@
 	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+	<!--调用头部和尾部-->
+    <script src="assets/js/createheader.js"></script>
+	<script src="assets/js/createfooter.js"></script>
+
+	<!--前端路由-->
+	<script src="assets/js/hashmovie.js"></script>
+
+	<!-- 引入模板引擎js -->
+	<script src="assets/js/template-web.js"></script>	
+	<!-- 制作模板 -->
+	<script type="text/html" id="detail_template">
+		<div style="height:50px;">&nbsp;</div>
+		<article>
+			<header>
+				<div class="row no-gutters">
+					<div class="col-md-3">
+						{{@imgurl}}
+					</div>
+					<div class="col-md-9">
+						<h1>{{@name}}</h1>
+						<hr style=" width:100%; height: 2px; background-color:#696969">	
+						<pre>{{@content}}</pre>
+					</div>			                 
+				</div>
+			</header>
+			<main>
+				<div class="row no-gutters">
+					<div class="col-md-12">
+						<h2>剧情简介</h2>
+						<hr style=" width:100%; height: 2px; background-color:#696969">	
+					</div>
+				</div>
+				<div class="row no-gutters">
+					<div class="col-md-12">
+						<p>{{introduction1}}</p>
+						<p>{{introduction2}}</p>
+					</div>
+				</div>
+			</main>
+		</article>
+	</script>
+
+	<!--CSS样式-->
 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/movie.css">
 	<!--Title here-->
@@ -25,11 +68,6 @@
 <body>
 	<!--header-area-->
 	<div id="header"></div>
-    <script>
-    $.get("assets/tpl/header.tpl", function(result){      
-        $("#header").html(result);
-    });
-	</script>
 	<!--caption-area-->
 	<div class="caption-area">
 		<div class="container-fluid">
@@ -74,91 +112,15 @@
 			</div>
 		</div>
 	</div>
-	<!-- 引入模板引擎js -->
-	<script src="assets/js/template-web.js"></script>
-	<!-- 制作模板 -->
-	<script type="text/html" id="detail_template">
-		<div style="height:50px;">&nbsp;</div>
-		<article>
-			<header>
-				<div class="row no-gutters">
-					<div class="col-md-3">
-						{{@imgurl}}
-					</div>
-					<div class="col-md-9">
-						<h1>{{@name}}</h1>
-						<hr style=" width:100%; height: 2px; background-color:#696969">	
-						<pre>{{@content}}</pre>
-					</div>			                 
-				</div>
-			</header>
-			<main>
-				<div class="row no-gutters">
-					<div class="col-md-12">
-						<h2>剧情简介</h2>
-						<hr style=" width:100%; height: 2px; background-color:#696969">	
-					</div>
-				</div>
-				<div class="row no-gutters">
-					<div class="col-md-12">
-						<p>{{introduction1}}</p>
-						<p>{{introduction2}}</p>
-					</div>
-				</div>
-			</main>
-		</article>
-	</script>
 	<!--post-area-->
 	<div class="post-area">
 		<div class="container-fluid" id="movie">
 
 		</div>
 	</div>
-	<script>
-		window.onload=function(){
-			var routeView=null;//路由视图
-			window.addEventListener('hashchange',function(){//监听路由变化
-				var routeView=document.getElementById("movie");
-				switch(location.hash){//判断路由
-					case '#/movie-ironman':
-						add(0);
-						break;
-					case '#/movie-captainamerica':
-						add(1);
-						break;
-					case '#/movie-thor':
-						add(2);
-						break;
-					case '#/movie-avengers':
-						add(3);
-						break;
-					default:
-						return;
-				}
-			})
-		}
-
-		function add(i){
-			var url="assets/json/movieintro.json";
-			var request=new XMLHttpRequest();
-			request.open("get",url);
-			request.send(null);
-			request.onload=function(){
-				if(request.status==200){
-					var data=JSON.parse(request.responseText); 
-					var res=template("detail_template",data[i]);
-					document.getElementById("movie").innerHTML=res;
-				}
-			}
-		}
-	</script>
-   <div id="footer"></div>
-    <script>
-    $.get("assets/tpl/footer.tpl", function(result){      
-        $("#footer").html(result);
-    });
-    </script>
-
+	<!--footer-area-->
+	<div id="footer"></div>
+	
    
 </body>
 </html>

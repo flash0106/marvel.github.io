@@ -15,6 +15,11 @@
 	<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
 	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
+	<!--调用头部和尾部-->
+    <script src="assets/js/createheader.js"></script>
+	<script src="assets/js/createfooter.js"></script>
+	
+	<!--CSS样式-->
 	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/test.css">
 
@@ -83,11 +88,6 @@
 	</script>
 	<div id="bg-image"> <img src="assets/images/bgimg.png"> </div>
 	<div id="header"></div>
-    <script>
-    $.get("assets/tpl/header.tpl", function(result){      
-        $("#header").html(result);
-    });
-	</script>
 	<div class="post-area">
 		<div class="container-fluid">
 				<div class="row no-gutters">
@@ -167,12 +167,5 @@
 		</div>
 	</div>
    <div id="footer"></div>
-    <script>
-    $.get("assets/tpl/footer.tpl", function(result){      
-        $("#footer").html(result);
-    });
-    </script>
-
-   
 </body>
 </html>
